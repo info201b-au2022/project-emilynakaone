@@ -45,9 +45,11 @@ The data set we will be utilizing in this project includes Geospatial Data about
 
 [“Snow Crab Geospatial Data (1975-2018)”](https://www.kaggle.com/datasets/4f37ea6085a955d6796199ae9e398396121b90438f2895cd9fa2dd9b8be317f9?resource=download)
 
-|Datafile | mfsnowcrab.csv|
-|Number of Observations| 17927|
-|Number of Variables| 10|
+| Syntax | Description |
+| --- | ----------- |
+| Datafile | mfsnowcrab.csv |
+| Number of Observations | 17927 |
+| Number of Variables | 11 |
 
 ## Expected Implications:
 
