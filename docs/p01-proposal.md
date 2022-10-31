@@ -29,15 +29,11 @@ __Population__, __Sea Temperature__,  __Snow Crab__
 
 ## Introduction
 
-[paste here]
+Over the past year the population of snow crabs has declined by close to 80%, causing many locations to end crab season prematurely. This sudden decline in snow crabs that reside mainly off the coast in Alaska in the Bering, Beaufort, and Chukchi sea have raised alarms for possible bigger problems. The decline has caused many problems in several populations from fishers to consumers to other marine life, and without intervention it could continue to cause many more issues. Many scientists are confused as to why this is happening and believe that there may be a correlation between climate change and the effect it has on certain ocean species populations. We plan to analyze the correlation between crab populations, sea floor temperatures, fishing haul numbers, and location to better understand the issue and possible solutions to alleviate it.
 
 ## Problem Domain
 
-[paste here]
-
-## Direct Stakeholders:
-
-[pate here]
+The sharp decline in the crab population has indicated to scientists that the effects of climate change may be more severe than previously imagined. While we deal with problems from overfishing, research shows the decline in the crab population is not related to that and shows it could be a precursor to a broader issue relating to climate change. Previous research has shown that crustaceans, which include crabs, are hit first by ocean acidification because the increase in CO2 levels present affects their ability to form hard skeletons and shells which protect them from predators and the harsh ocean environment. With the rapid, continuous increase of water levels and decrease in pH levels of the ocean, many species will be affected by the drastic changes in the ecosystem and habitat. A potential direct stakeholder to this issue is the ecosystem in which the snow crabs live in and the species that interact with them. With a sudden decline in the snow crab population, species that consumed or were consumed by snow crabs are no longer kept under control creating a disrupted ecosystem and food chain. Populations that were once kept constant due to being consumed now experience a sudden rise in population size causing them to deplete their food source quicker. This creates a chain reaction down the food chain eventually leading to a collapsed ecosystem. An indirect stakeholder to the snow crab population decline could be human consumers and fishers who rely on snow crabs as their source of food and income. With such a drastic change in population, crabbers are not able to keep up with consumer demands, resulting in an unstable source of income. Species such as halibut and squid that consume and rely on snow crabs would also likely see a decrease in their population, leading to a decrease in their fishing and consumption as well. Over three billion people rely on seafood to provide vital nutrients to their diet and with such a decline, it will create difficulty for certain populations to attain the same level of nutrients they once had. To protect fishermen from losing their source of income and consumers from losing their source of nutrients it is important to target the root of the problem in addition to the decline of the crab population. 
 
 ## Research Questions:
 
