@@ -37,7 +37,13 @@ The sharp decline in the crab population has indicated to scientists that the ef
 
 ## Research Questions:
 
-[paste]
+Where: Which locations or zones seemed to have high levels of snow crab human interference (hauling)? This question is important because it specifies inquiry into a key component of the snow crab population decrease problem, being the locality aspect. If we are looking into the over-arching "why" the snow crab population is in rapid-decline, it is very important to parse the data set, answering mini-questions such as who, what, where, and when–before we can see the big picture, of "why". This first question of "Where", serves as our foundation of inquiry, giving us a good preliminary question, in order to focus our high-order questions of who, when, and what.
+
+What: What temperatures (at the surface or at the bottom) seems to correlate with higher densities of snow crabs? What temperatures (at the surface or at the bottom) seems to correlate with lower densities of snow crabs? Which metrics allow us to get a glimpse of snow crab density? What is the significance of the variables of "haul" and "cpue" with respect to our snow crab density inquiry?
+
+When: With respect to the locations or zones of the highest traffic, when do we see instances of human interference? Does there seem to be a common trend of hauling (in the order of decades)? This should be important because there might be a temporal trend that can be observed that might let us understand more about why the snow crab population is critically declining.
+
+Who: Who might responsible for impacting the snow crab population in a negative fashion? This does seem to be a higher order question in line with why the snow crab population is declining–yet it is still an important framing question to keep in mind as we are researching as it primes us into a mindset of culpability not for the sake of a persecution, but for the sake of problem-solving. Essentially, if we know who is responsible for a large proportion of the problem, we can look try to work with them to ameliorate the issues of interest.
 
 ## The Data Set
 
