@@ -25,27 +25,39 @@ knitr::kable(summary_info, format="html")
 
 ```
 
+```{r year_max_cpue, echo = FALSE}
+
+year_max <- summary_list$year_max_cpue
+
+```
+
 ```{r cpue_max_value, echo = FALSE}
+options(scipen=999)
 value_max <- summary_list$cpue_max_value
+value_max <-format(value_max, big.mark = ",")
 ```
 
 ```{r bottom_max, echo = FALSE}
 bottom_max <- summary_list$bottom_temp_max_cpue
+
 ```
 
 ```{r year_min_cpue, echo = FALSE}
 year_min <- summary_list$year_min_cpue
+
+
 ```
 
 ```{r cpue_min_value, echo = FALSE}
 value_min <- summary_list$cpue_min_value
+value_min <- format(value_min, big.mark = ",")
 ```
 
 ```{r bottom_min, echo = FALSE}
 bottom_min <- summary_list$bottom_temp_min_cpue
 ```
 
-The data frame about snow crabs includes data relating to bottom temperature, surface temperature, ocean depth, and catch number. As crabs dwell on the ocean floor, looking at the bottom temperature is important. Additionally, catch size can give a good indication to snow crab populations. In \`year_max\` the catch size was \`value_max\` and the bottom temperature that year was \`bottom_max\`. However, in \`year_min\` the catch size was \`value_min\` and the bottom temperature that year was \`bottom_min\`. There is a 1.35 degree difference between the bottom temperature when catch size was the largest versus when the catch size was the smallest. Through this data, it is possible to conclude that bottom temperature affects snow crab population.
+The data frame about snow crabs includes data relating to bottom temperature, surface temperature, ocean depth, and catch number. As crabs dwell on the ocean floor, looking at the bottom temperature is important. Additionally, catch size can give a good indication to snow crab populations. In `r year_max`, which was the year with the highest catch size, the catch size was `r value_max` and the bottom temperature that year was `r bottom_max`. However, `r year_min`, which was the year with the lowest catch size, the catch size was `r value_min`, and the bottom temperature that year was `r bottom_min`. There is a 1.35 degree difference between the bottom temperature when catch size was the largest versus when the catch size was the smallest. Through this data, it is possible to conclude that bottom temperature affects snow crab population.
 
 ## Chart 1
 
