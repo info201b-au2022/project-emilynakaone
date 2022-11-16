@@ -32,12 +32,8 @@ avg_cpue_per_year <- mfsnowcrab %>%
   group_by(year) %>% 
   mutate(average_cpue = mean(cpue)) %>% 
   distinct(year, average_cpue)
-avg_cpue_per_year$average_cpue <- round(avg_cpue_per_year$average_cpue, digit=2)
+avg_cpue_per_year$average_cpue <- round(avg_cpue_per_year$average_cpue)
 
 #merge average data frames by year
 depth_cpue <- merge(avg_depth_per_year, avg_cpue_per_year, by="year")
 summary_info <- merge(depth_cpue, avg_temps_per_year, by="year")
-summary_info <- round(summary_info)
-
- 
-  

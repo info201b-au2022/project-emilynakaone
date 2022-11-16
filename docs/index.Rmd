@@ -21,7 +21,7 @@ source("../source/SummaryInfo.R")
 ## Summary Table
 
 ```{r summary, echo=FALSE}
-knitr::kable(summary_info, format="html")
+knitr::kable(summary_info, format="pipe")
 
 ```
 
