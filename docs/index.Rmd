@@ -10,51 +10,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-## What is this file for?
-
--   This file will eventually become your project report for **P02: Exploratory Data Analysis**. Specifically, you will write rmarkdown to report your exploratory data analysis.
-
--   Please see Canvas for more details.
-
-## ACCESSING THE /source DIRECTORY
-
-### Example 1: Source some code and run a function
-
 ```{r}
-# Example 1: Note relative path, which can be read: Up one
-# directory(..), down into source (/source), and 
-# then "source" an R file (data_access.R)
 source("../source/chart_riley.R")
 source("../source/HeatMapBin2D.R")
-
+source("../source/chart_emily.R")
 ```
-
-### Example 2: Initialize a variable and then use it
-
-```{r}
-# Example 1: This function was "sourced" above
-msg <- data_access_test(" Morgan!")
-```
-
-> `r msg` Hope you have a good day!! \## ABOUT THIS FILE:
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 ## Chart 1
 
@@ -64,10 +24,18 @@ boxplot_chart
 
 This chart is a box plot showing the distribution trends of the water temperature at the ocean floor. Each observation for ocean floor temperature is recorded each time there was a fishing haul for snow crabs during the fishing season. It can be seen that there is an overall increase of temperature as the year of fishing seasons become more recent. It has been recorded that there has been a drastic increase of temperature between 2021 and 2022, the data only shows fishing hauls up to 2018. However it can be seen that there is a steady increase even dating back to 2012 as the median temperature increases each year. This can have a negative impact on the snow crab populations as temperature increase can lead to disease, oxygen loss, and reduced biodiversity within the ecosystem.
 
-## Chart 3 
+## Chart 2
 
-```{r chart 1, echo=FALSE}
+```{r chart 2, echo=FALSE}
+scatterplot_chart
+```
+
+This chart depicts a scatter plot showing the trend in total hauls within a cruise across each year from 1975 through 2018. There was an increase throughout the years from 1975 through 2012 but the hauls saw a decrease after that through 2018. This graph allows us to understand how the decline in snow crab population impacts human populations who might rely on snow crabs for consumption or a means to earn.
+
+## Chart 3
+
+```{r chart 3, echo=FALSE}
 spatial_heat_map_frequency
 ```
-This chart’s purpose is to visualize areas of higher frequency Commercial Snow Crab Landings in the Alaskan Eastern Bering Sea region off the coast of Alaska from 1975 - 2018. The chart allows us to gain insight into geospatial aspect of our problem or specific regions of interest with respect to potential overhauling by crabbers. This allows us focus our attention and conduct further analysis on these specific, high-traffic regions of interest to gain more insight towards the proximate/ultimate cause(s) to the diminishing Snow Crab population.
 
+This chart's purpose is to visualize areas of higher frequency Commercial Snow Crab Landings in the Alaskan Eastern Bering Sea region off the coast of Alaska from 1975 - 2018. The chart allows us to gain insight into geospatial aspect of our problem or specific regions of interest with respect to potential overhauling by crabbers. This allows us focus our attention and conduct further analysis on these specific, high-traffic regions of interest to gain more insight towards the proximate/ultimate cause(s) to the diminishing Snow Crab population.
