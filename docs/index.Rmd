@@ -1,7 +1,7 @@
 ---
 title: "Analysis of Snow Crab Population Decline"
 author: "Emily Nakaone, Maya Shukla, Riley Slaton, David Ta"
-date: "1/22/2022"
+date: "11/15/2022"
 output: html_document
 ---
 
@@ -14,7 +14,16 @@ knitr::opts_chunk$set(echo = FALSE)
 source("../source/chart_riley.R")
 source("../source/HeatMapBin2D.R")
 source("../source/chart_emily.R")
+source("../source/SummaryTable.R")
+source("../source/SummaryInfo.R")
 ```
+
+## Summary Table
+```{r summary, echo=FALSE}
+knitr::kable(summary_info, format="html")
+```
+
+The data frame about snow crabs includes data relating to bottom temperature, surface temperature, ocean depth, and catch number. As crabs dwell on the ocean floor, looking at the bottom temperature is important. Additionally, catch size can give a good indication to snow crab populations. In `summary_list$year_max_cpue` the catch size was `summary_list$cpue_max_value` and the bottom temperature that year was `summary_list$bottom_temp_max_cpue`. However, in `summary_list$year_min_cpue` the catch size was `summary_list$cpue_min_value` and the bottom temperature that year was `summary_list$bottom_temp_min_cpue`. There is a 1.35 degree difference between the bottom temperature when catch size was the largest versus when the catch size was the smallest. Through this data, it is possible to conclude that bottom temperature affects snow crab population. 
 
 ## Chart 1
 
