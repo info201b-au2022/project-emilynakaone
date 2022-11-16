@@ -1,12 +1,13 @@
 ---
-title: "Your Project Title"
-author: "project team members"
+title: "Analysis of Snow Crab Population Decline"
+author: "Emily Nakaone, Maya Shukla, Riley Slaton, David Ta"
 date: "1/22/2022"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+source("chart_riley.R")
 ```
 
 ## What is this file for?
@@ -32,7 +33,6 @@ msg <- data_access_test(" Morgan!")
 ```
 
 > `r msg` Hope you have a good day!! 
-
 ## ABOUT THIS FILE: 
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
@@ -52,3 +52,11 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Chart 1
+
+```{r chart 1, echo=FALSE}
+boxplot_chart
+```
+
+This chart is a box plot showing the distribution trends of the water temperature at the ocean floor. Each observation for ocean floor temperature is recorded each time there was a fishing haul for snow crabs during the fishing season. It can be seen that there is an overall increase of temperature as the year of fishing seasons become more recent. It has been recorded that there has been a drastic increase of temperature between 2021 and 2022, the data only shows fishing hauls up to 2018. However it can be seen that there is a steady increase even dating back to 2012 as the median temperature increases each year. This can have a negative impact on the snow crab populations as temperature increase can lead to disease, oxygen loss, and reduced biodiversity within the ecosystem.
