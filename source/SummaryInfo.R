@@ -1,4 +1,4 @@
-mfsnowcrab <- read.csv("/Users/20MayaS/info201/project-emilynakaone/data/mfsnowcrab.csv")
+mfsnowcrab <- read.csv("~/Documents/INFO201/project-emilynakaone/data/mfsnowcrab.csv")
 library(tidyverse)
 
 #calculate average surface and bottom temperatures
