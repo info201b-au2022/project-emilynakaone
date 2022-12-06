@@ -9,10 +9,10 @@ intro_panel <- tabPanel(
   "Introduction",
   
   #title of webpage 
-  titlePanel("Analysis of Snow Crab Population Decline"),
+  titlePanel(div("Analysis of Snow Crab Population Decline", style = "color:aqua")),
   
   #authors 
-  h2("Emily Nakaone, Maya Shukla, Riley Slaton, David Ta", style = "color:orange"),
+  h4("Emily Nakaone, Maya Shukla, Riley Slaton, David Ta"),
   
   #introductory paragraph
   h3("Introduction", style = "color:orange"),
@@ -47,9 +47,9 @@ intro_panel <- tabPanel(
   
   #image
   img(src= "https://assets.nautil.us/sites/3/nautilus/Roberts_HERO.png?auto=compress&fm=png&ixlib=php-3.3.1", 
-      height= "80%", width = "95%"),
+      height= "70%", width = "85%"),
   a(em("image source", href = "https://assets.nautil.us/sites/3/nautilus/Roberts_HERO.png?auto=compress&fm=png&ixlib=php-3.3.1"), 
-    style = "color:blue")
+    style = "color:teal")
 )
 
 
@@ -91,18 +91,20 @@ chart1_tab <- tabPanel(
 summary_panel <- tabPanel(
   #Title of tab 
   "Summary",
-  titlePanel("Summary", style = "color:orange"),
+  titlePanel(div("Summary", style = "color:aqua")),
   
-  h3(strong("The three main takeaways from our study are:"), style = "color:orange"),
-  h4("1. Since 2012, ocean floor temperatures have been steadily rising. Increasing by almost 4 degrees C."),
-  h4("2. Snow Crab fishing was on a rise from 1975-2012, but began decreasing after 2018. This hints at the 
+  h4(strong("The three main takeaways from our study are:"), style = "color:orange"),
+  h5("1. Since 2012, ocean floor temperatures have been steadily rising. Increasing by almost 4 degrees C."),
+  h5("2. Snow Crab fishing was on a rise from 1975-2012, but began decreasing after 2018. This hints at the 
      decline in snow crab populations."),
-  h4("3. Fishermen tend to find and fish for snow crabs in deeper waters, towards the middle of the Alaskan Eastern Bering Sea.
+  h5("3. Fishermen tend to find and fish for snow crabs in deeper waters, towards the middle of the Alaskan Eastern Bering Sea.
      This shows that snow crab populations are diminishing even in their preferred cold, deep habitat."),
   
-  img(src= "https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/7MO7Y2MUMRD2BA2SJQN3ZEIQHY.jpg"),
-  a(em("image source", href = "https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/7MO7Y2MUMRD2BA2SJQN3ZEIQHY.jpg"),
-    style = "color:blue")
+  img(src= "https://images.seattletimes.com/wp-content/uploads/2021/09/Bering-Sea-crab-WEB.jpg?d=780x969"),
+  
+  a(em("image source", href = "https://images.seattletimes.com/wp-content/uploads/2021/09/Bering-Sea-crab-WEB.jpg?d=780x969", 
+       height= "40%", width = "55%"),
+    style = "color:teal")
 )
 
 
@@ -110,7 +112,7 @@ summary_panel <- tabPanel(
 report_panel <- tabPanel(
   #Title of Tab
   "Report",
-  titlePanel("Report", style = "color:red"),
+  titlePanel(div("Report", style = "color:aqua")),
   
   h3("Conclusion", style = "color:orange"),
   p("Our group started our research with curiosity as to why snow crab populations declined so sharply. By studying the data set, 
@@ -147,7 +149,7 @@ report_panel <- tabPanel(
     it is important to analyze data without any bias as it is entirely possible that there could be some other connection to why the population is declining. 
     This is why it is important to look at the context of all the data, and avoid any cherry picked data used to push a certain narrative through data visualization."),
   
-  h4("Acknowledgments: We would like to thank Professor Hendry and our TA, Manu Charugundla for guiding us throughout the project!", style = "color:red"),
+  h4("Acknowledgments: We would like to thank Professor Hendry and our TA, Manu Charugundla for guiding us throughout the project!", style = "color:teal"),
   
   h2("Thank you!", style = "color:orange"),
   
