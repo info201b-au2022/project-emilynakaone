@@ -170,6 +170,6 @@ ui <- navbarPage(
   #chart 2,
   #chart 3,
   summary_panel,
-  conclusion_panel,
+  report_panel,
   theme = shinytheme("superhero")
 )
