@@ -82,6 +82,37 @@ chart1_tab <- tabPanel(
 )
 
 ##CHART 2 TAB
+snowcrab_df <- read.csv("mfsnowcrab.csv", stringsAsFactors = FALSE)
+
+scatterplot_main_content <- mainPanel(
+  plotlyOutput("scatterplot"),
+  h2("Trends in Hauls Through a Scatterplot"),
+  p("This visualization is used to compare trends in haul number throughout the 
+    years. A scatterplot allows for a simple visualization of the various increase
+    and decrease in hauls and can be compared to other scatterplots to determine
+    similar patterns between the two. When compared to plots depicting ocean
+    temperature or CO2 emission we may see a correlation between haul decrease
+    and temperature increase indicating a connection between snow crab population
+    declines and climate change.")
+)
+
+scatterplot_sidebar_content <- sidebarPanel(
+  sliderInput(
+    inputID = "year_range_input",
+    label = "Indicate Year Range to See Trends in Snow Crab Hauls From 1975 to 2018",
+    min = year_range[1],
+    max = year_range[2],
+    value = year_range
+  )
+)
+
+chart2_tab <- tabPanel( 
+  "Scatterplot Chart",
+  sidebarLayout(
+    scatterplot_main_content,
+    scatterplot_sidebar_content
+  )
+)
 
 
 ##CHART 3 TAB

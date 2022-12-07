@@ -30,5 +30,20 @@ server <- function(input, output) {
     return(boxplot_chart)
   })
   
+  output$scatterplot <- renderPlotly ({
+    
+    crabhaul_df <- snowcrab_df %>% 
+      select(year, haul) %>% 
+      summarise(across(c(haul), sum)) %>% 
+      group_by(year) %>% 
+      filter(year >= input$year_range_input[1] & year <= input$year_range_input[2])
+    
+    scatterplot_chart <- ggplot(crabhaul_df, aes(x = year, y=haul)) +
+      geom_point(size=2, shape=1) +
+      labs(title = "Number of Hauls per Year") +
+      scale_x_continuous(n.breaks = 9)
+    
+    return(scatterplot_chart)
+  })
 }
 
