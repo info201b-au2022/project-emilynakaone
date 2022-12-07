@@ -2,6 +2,12 @@ library("shiny")
 library("plotly")
 library("markdown")
 library("shinythemes")
+library("ggplot2")
+library("dplyr")
+library("tidyr")
+library("plotly")
+library("tidyverse")
+
 
 ##INTRO TAB
 intro_panel <- tabPanel(
@@ -54,7 +60,7 @@ intro_panel <- tabPanel(
 
 
 ##CHART 1 TAB
-snowcrab_df <- read.csv("mfsnowcrab.csv", stringsAsFactors = FALSE)
+snowcrab_df <- read_csv("https://raw.githubusercontent.com/info201b-au2022/project-emilynakaone/main/mfsnowcrab.csv")
 slider_year <- range(1975,2018)
 
 boxplot_main_content <- mainPanel(
@@ -69,6 +75,7 @@ boxplot_sidebar_content <- sidebarPanel(
     label = "Use Slider to Compare Tempuratures Each Year Ranging From 1975 to 2018",
     min = slider_year[1],
     max = slider_year[2],
+    sep = "",
     value = slider_year
   )
 )
@@ -82,7 +89,7 @@ chart1_tab <- tabPanel(
 )
 
 ##CHART 2 TAB
-snowcrab_df <- read.csv("mfsnowcrab.csv", stringsAsFactors = FALSE)
+snowcrab_df <- read_csv("https://raw.githubusercontent.com/info201b-au2022/project-emilynakaone/main/mfsnowcrab.csv")
 
 scatterplot_main_content <- mainPanel(
   plotlyOutput("scatterplot"),
@@ -115,7 +122,86 @@ chart2_tab <- tabPanel(
 )
 
 
+##CHART 3 COMPONENTS 
+
+#load data from repository 
+
+snowcrab_df <- read_csv("https://raw.githubusercontent.com/info201b-au2022/project-emilynakaone/main/mfsnowcrab.csv")
+
+#Main Plot
+
+plot_main <- mainPanel(tags$b("Alaskan Eastern Bering Sea, 1975-2018"),
+  h6(textOutput("caption")),
+  align = "left",
+  plotlyOutput("heatmap"),
+  h2("Heatmap to Visualize Geospatial Hauling Frequency"),
+  p("This chart's purpose is to visualize areas of higher frequency Commercial Snow Crab 
+  Landings in the Alaskan Eastern Bering Sea region off the coast of Alaska from 1975 - 2018. 
+  The chart allows us to gain insight into geospatial aspect of our problem or specific regions of interest 
+  with respect to potential overhauling by crabbers. This allows us focus our attention and conduct further analysis 
+  on these specific, high-traffic regions of interest to gain more insight towards the proximate/ultimate cause(s) 
+  to the diminishing Snow Crab population.")
+
+)
+
+#Sidebar Components
+
+slider_latitude_range <- range(min(snowcrab_df$latitude), max(snowcrab_df$latitude))
+slider_longitude_range <- range(min(snowcrab_df$longitude), max(snowcrab_df$longitude))
+
+#Widgets Sidebar 
+widgets <- fluidRow(
+  
+  align = "center",
+
+  sidebarPanel("Use Slider to Adjust Geospatial Scope",
+    br(),
+    hr(),
+    fluidRow(
+      
+      align = "center",
+      sliderInput("longitude", 
+                  label = tags$i("longitude"), 
+                  min = slider_longitude_range[1], 
+                  max = slider_longitude_range[2], 
+                  value = c(-178, -159), 
+                  round = 0,
+                  step = 1, 
+                  sep = "", 
+                  ticks = T)),
+    hr(),
+    fluidRow(
+      
+    align = "center",
+    sliderInput("latitude", 
+                label = tags$i("latitude"), 
+                min = slider_latitude_range[1], 
+                max = slider_latitude_range[2], 
+                value = c(55, 62), 
+                round = F,
+                step = 1,
+                sep = "", 
+                ticks = T)),
+    hr(),
+    br(),
+        
+)
+)
+
 ##CHART 3 TAB
+
+chart3_tab <- tabPanel(
+  "Heatmap of Crab Hauls",
+  sidebarLayout(position = "left",
+    plot_main,
+    widgets
+)
+)
+
+  
+
+
+
 
 
 ##SUMMARY TAB
@@ -197,11 +283,11 @@ report_panel <- tabPanel(
 
 ## FINAL FORMAT
 ui <- navbarPage(
-  "Snow Crab Population Decline",
+  tags$b(tags$i("Snow Crab Population Decline")),
   intro_panel,
   chart1_tab,
-  #chart 2,
-  #chart 3,
+  #chart2_tab,
+  chart3_tab,
   summary_panel,
   report_panel,
   theme = shinytheme("superhero")
