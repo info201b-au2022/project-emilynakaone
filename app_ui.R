@@ -74,7 +74,7 @@ boxplot_sidebar_content <- sidebarPanel(
 )
 
 chart1_tab <- tabPanel(
-  "Boxplot Chart",
+  "Ocean Floor Temperature Distribution",
   sidebarLayout(
     boxplot_sidebar_content,
     boxplot_main_content
