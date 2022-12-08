@@ -14,3 +14,5 @@ scatterplot_chart <- ggplot(crabhaul_df, aes(x = year, y=haul)) +
   labs(title = "Number of Hauls per Year") +
   scale_x_continuous(n.breaks = 9)
 
+summarise(acr)
+

@@ -35,15 +35,25 @@ server <- function(input, output) {
     
     crabhaul_df <- snowcrab_df %>% 
       select(year, haul) %>% 
-      summarise(across(c(haul), sum)) %>% 
-      filter(year = input$slider_bar)
+      group_by(year) %>% 
+      summarise(across(c(haul), sum)) 
     
-    scatterplot_chart <- ggplot(crabhaul_df, aes(x = year, y = haul)) +
+    scatterplot_chart <- 
+      ggplot(crabhaul_df, aes(x = year, y=haul)) +
       geom_point(size=2, shape=1) +
-      labs(title = "Number of Hauls per Year", xlab = "Year", ylab = "Number of Hauls") +
-      scale_x_continuous(n.breaks = 9)
+      labs(title = "Number of Hauls per Year", x = "Time Range (Years)", y = "Haul Amount") +
+      scale_x_continuous(limits=input$year_range_input, n.breaks = 9) +
+      scale_y_continuous(labels = scales::comma, n.breaks = 6) +
+      theme(
+        plot.title = element_text(hjust = 0.5, color = "black", size = 12, face = "bold"),
+        axis.title = element_text(size = 12, color = "black", face = "bold"), 
+        axis.text = element_text(color = "black"),
+        panel.background = element_rect(fill = 'lightblue', color = 'black'))
     
-    return(scatterplot_chart)
+    
+    
+    ggplotly(scatterplot_chart)
+    
   })
   
   output$heatmap <- renderPlotly({

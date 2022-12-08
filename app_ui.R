@@ -103,20 +103,32 @@ scatterplot_main_content <- mainPanel(
     declines and climate change.")
 )
 
-scatterplot_sidebar_content <- sidebarPanel(
-  sliderInput(
-    inputID = "year_range_input",
+
+slider_c2_range <- range(min(snowcrab_df$year), max(snowcrab_df$year))
+
+
+scatterplot_sidebar_content <- 
+  
+  fluidRow(
+
+  sidebarPanel(
+  sliderInput(inputId = "year_range_input",
     label = "Indicate Year Range to See Trends in Snow Crab Hauls From 1975 to 2018", 
-    min = 1975, 
-    max = slider_bar
+    min = slider_c2_range[1], 
+    max = slider_c2_range[2],
+    value = c(1980, 2017),
+    step = 1,
+    ticks = T,
+    sep = ""
   )
 )
+)
+
 
 chart2_tab <- tabPanel( 
   "Scatterplot Chart",
   sidebarLayout(
-    scatterplot_main_content,
-    scatterplot_sidebar_content
+    scatterplot_main_content,scatterplot_sidebar_content
   )
 )
 
@@ -161,11 +173,11 @@ widgets <- fluidRow(
       align = "center",
       sliderInput("longitude", 
                   label = tags$i("longitude"), 
-                  min = slider_longitude_range[1], 
-                  max = slider_longitude_range[2], 
+                  min = -178, 
+                  max = -159, 
                   value = c(-178, -159), 
-                  round = 0,
-                  step = 1, 
+                  round = F,
+                  step = 0.25, 
                   sep = "", 
                   ticks = T)),
     hr(),
@@ -174,11 +186,11 @@ widgets <- fluidRow(
     align = "center",
     sliderInput("latitude", 
                 label = tags$i("latitude"), 
-                min = slider_latitude_range[1], 
-                max = slider_latitude_range[2], 
+                min = 55, 
+                max = 62, 
                 value = c(55, 62), 
                 round = F,
-                step = 1,
+                step = 0.25,
                 sep = "", 
                 ticks = T)),
     hr(),
