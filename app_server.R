@@ -36,12 +36,11 @@ server <- function(input, output) {
     crabhaul_df <- snowcrab_df %>% 
       select(year, haul) %>% 
       summarise(across(c(haul), sum)) %>% 
-      group_by(year) %>% 
-      filter(year >= input$year_range_input[1] & year <= input$year_range_input[2])
+      filter(year = input$slider_bar)
     
-    scatterplot_chart <- ggplot(crabhaul_df, aes(x = year, y=haul)) +
+    scatterplot_chart <- ggplot(crabhaul_df, aes(x = year, y = haul)) +
       geom_point(size=2, shape=1) +
-      labs(title = "Number of Hauls per Year") +
+      labs(title = "Number of Hauls per Year", xlab = "Year", ylab = "Number of Hauls") +
       scale_x_continuous(n.breaks = 9)
     
     return(scatterplot_chart)

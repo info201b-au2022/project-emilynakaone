@@ -2,7 +2,7 @@ library(dplyr)
 library(tidyr)
 library(ggplot2)
 
-snowcrab_df <- read.csv("~/Documents/INFO201/project-emilynakaone/data/mfsnowcrab.csv")
+snowcrab_df <- read.csv("~/Documents/INFO201/project-emilynakaone/mfsnowcrab.csv")
 
 crabhaul_df <- snowcrab_df %>% 
   select(year, haul) %>% 
